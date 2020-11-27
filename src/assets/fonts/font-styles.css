@@ -1,0 +1,30 @@
+
+
+@font-face {
+    font-family: 'KremlinSemiBold';
+    src: url('KremlinSemi-bold.woff2') format('woff2'),
+        url('KremlinSemi-bold.woff') format('woff'),
+        url('KremlinSemi-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KremlinRegular';
+    src: url('KremlinRegular.woff2') format('woff2'),
+        url('KremlinRegular.woff') format('woff'),
+        url('KremlinRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KremlinBold';
+    src: url('Kremlin-bold.woff2') format('woff2'),
+        url('Kremlin-bold.woff') format('woff'),
+        url('Kremlin-bold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+

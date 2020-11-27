@@ -1,15 +1,97 @@
+import React, { useState, useEffect } from 'react';
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import {CosmoIcon} from "./cosmoIcon"
+import {TextButton, Notification, Para} from '../components/molecule'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
+const Header = ({ siteTitle }) =>{
+  // determined if page has scrolled and if the view is on mobile
+  const [state, setState] = useState({
+    scrolled: false,
+    visible: false,
+    hided : false, //for the header
+    lastScrollPosition : 0
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+
+      if (isScrolled !== state.scrolled) {
+        
+        if(window.scrollY > state.lastScrollPosition && window.scrollY > document.querySelector("header").clientHeight){
+          document.querySelector("header").classList.add("nav-up")
+          
+        }else if(window.scrollY  + window.clientHeight < document.clientHeight) {
+          document.querySelector("header").classList.remove("nav-up")
+          // !!!!!!!!!!!!!!!!!!!!!
+        }
+
+        setState({
+          ...state,
+          scrolled: !state.scrolled,
+          lastScrollPosition : window.scrollY
+        });
+      }
+    };
+    document.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      // clean up the event handler when the component unmounts
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [state.scrolled]);
+  // toggle dropdown visibility
+  const toggleVisibility = () => {
+    setState({
+      ...state,
+      visible: !state.visible,
+    });
+  };
+
+  return(
+  
+    <>
+  <header className="top-bar" data-active={state.scrolled}>
+      <div className="container top-nav">
+          <div className="nav-logo">
+          <Link to="..">
+              <h1 className="logo">Kremlin Pressing</h1>
+          </Link>
+          
+          </div>
+          <ul className="nav-links">
+          <li>
+              <Link to="../pricing">Tarifs</Link>
+            </li>
+            <li>
+              <Link to="../enterprise">Entreprise</Link>
+            </li>
+            <li>
+              <Link to="../signIn">S'inscire</Link>
+            </li>
+            {/* <li>
+              <Link to="../partenaires">Partenaires</Link>
+            </li> */}
+            {/* <li>
+              <Link to="../FAQs">FAQs</Link>
+            </li> */}
+            <li className="button">
+              <TextButton 
+                  cosmoIcon={false}
+                  text="Demarrer"
+                  background={true}
+                  backgroundColor="#00C67E"
+                  textColor="#fff"
+                  to="signUp"
+                  />
+            </li>
+            <li className="navigation-show">
+              <CosmoIcon icon="menu"/>
+            </li>
+          </ul>
+          
+      </div>
+    {/* <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
@@ -27,9 +109,11 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </div> */}
   </header>
-)
+  </>
+  )}
+
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
