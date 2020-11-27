@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Img, Link } from 'gatsby'
 import Layout from '../components/layout'
-import {TestimonyCard, PricingCard , MiniCard, TextButton, Notification, Para, socialButton, SquaredButton} from '../components/molecule'
+import {Tag, TestimonyCard, PricingCard , MiniCard, TextButton, Notification, Para, socialButton, SquaredButton} from '../components/molecule'
 import {CosmoIcon} from '../components/cosmoIcon'
 import SEO from "../components/seo"
 import Header from "../components/header"
@@ -43,31 +43,54 @@ export default class IndexPage extends React.Component {
           <Header siteTitle={'data.site.siteMetadata.title'} />
           <SEO title="Kremlin Pressing" />
           <div className="cosmos-section linear">
+            <div className="home-sliderBKG full"></div>
             <div className="cosmos-grid-container home-slider align-center">
-              <div className="home-text">
+              <div className="home-text center">
 
               <h1 className="supra">
-                Votre pressing Kremlin livré à domicile dans Douala
+                Kremlin Pressing chez vous !
               </h1>
               <form className="type-search">
                         <div className="icon-cacher"><CosmoIcon icon="location" iconColor="#fff"/></div>
                         <input
                           type="text"
                           name="firstName"
-                          placeholder="Je veux être livrer chez moi à ..."
+                          placeholder="Vous etes a douala ? Nous vous livrons"
                           value={this.state.firstName}
                           onChange={this.handleInputChange}
                         />
                         <TextButton 
                             cosmoIcon={false}
-                            text="Demarrer"
+                            text="Passer ma commande"
                             background={true}
                             backgroundColor="#fff"
                             textColor="var(--Grey-2)"
                             to="signUp"
                             />
               </form>
-             
+              <div className="tags center">
+              <Tag 
+                icon={true}
+                cosmoIcon="check-cicle"
+                for="Qualité de service"
+                background="var(--Green)"
+                textColor="#fff"
+             />
+             <Tag 
+                icon={true}
+                cosmoIcon="check-cicle"
+                for="Livraison en 24 heures"
+                background="var(--Green)"
+                textColor="#fff"
+             />
+             <Tag 
+                icon={true}
+                cosmoIcon="check-cicle"
+                for="Service disponible 24/7J"
+                background="var(--Green)"
+                textColor="#fff"
+             />
+             </div>
 
               </div>
             </div>
@@ -77,7 +100,7 @@ export default class IndexPage extends React.Component {
           <div className="cosmos-grid-container home-slider center">
               <div className="home-slider-header">
               <h1 className="mega">
-              La qualité d’un nettoyage professionnel, repassé et livré en moto et triporteur.
+              Votre service de blanchisserie en un clic.
               </h1>
               </div>
               <ul className="clarify three">
@@ -91,10 +114,10 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2>
-                    Ramassage de vos commandes programmé et/ou flexible.
+                    Suivi sécurisé de votre linge
                    </h2>
                   <p>
-                    Nous recuperons les commadesselon votre emplacement, a la maison, au bureau, ou dans nos points de dépot, selon votre programme attribué ou  lorsque vous l’avez decidé
+                  Vous enregistrer votre linge sans vous déplacer et en toute sécurité et vous avez la possibilité de suivre l’exécution de votre commande de bout en bout  jusqu’à la livraison.
                   </p>
                 </li>
                 <li>
@@ -107,10 +130,10 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2>
-                  Nettoyage à sec traditionnel et<br/> de haute qualité.                  </h2>
+                      Statistiques en temps réel
+                  </h2>
                   <p>
-                  Nous nettoyons à sec, à la main professionnel  et repassons pour tous vos vêtements délicats, sur cintre ou pliés.
-                  Livré chez vous en 2 jours
+                  Instantanément après l’enregistrement et la validation de votre commande vous recevez votre facture numérique dans votre interface client et vous avez la possibilité de les consulter  à tout moment et d’avoir le suivi de votre consommation.
                   </p>
                 </li>
                 <li>
@@ -123,10 +146,11 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2>
-                  Votre linge du quotidien lavé,<br/> séché et plié.
+                    Soins spécialisés à la demande
                   </h2>
                   <p>
-                  Nous nettoyons à sec, à la main professionnel  et repassons pour tous vos vêtements délicats.                        </p>
+                  Vous avez la possibilité de choisir le traitement que vous souhaitez que l’on fasse à votre linge : amidonnage, nettoyage à sec, éclat, etc.
+                  </p>
                 </li>
               </ul>
             </div>
@@ -134,7 +158,7 @@ export default class IndexPage extends React.Component {
             <div className="cosmos-grid-container home-slider center">
               <div className="home-slider-header">
               <h1 className="mega">
-              Votre commande reservé en 2 minutes, comment ca marche ?
+                Ma commande en 60 secondes chronos!
               </h1>
               </div>
               <ul className="clarify text-center three">
@@ -148,10 +172,10 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2 className="giga">
-                    1. Planfier
+                    1. Dépôt du linge
                    </h2>
                   <p>
-                    Dans votre espace, réservez vos créneaux de retrait et de livraison, selon le programme de votre compte
+                  Dans votre espace de commande, sélectionnez les différents articles et indiquez leur nombre.
                   </p>
                 </li>
                 <li>
@@ -164,10 +188,10 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2 className="giga">
-                    2. Confiez
+                    2. Traitement de ma commande
                   </h2>
                   <p>
-                  Confiez votre commande à nos l’un de nos collectionneurs, devant chez vous ou au bureau et recuperer votre code                  </p>
+                  Une fois votre commande validée et les différents services sollicités renseignés, votre linge est récupéré et directement acheminé à l’usine pour traitement.</p>
                 </li>
                 <li>
                   <SquaredButton
@@ -179,10 +203,10 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2 className="giga">
-                  3. Rangez
+                  3.  Livraison au point de vente/à domicile
                   </h2>
                   <p>
-                  Vos linges sont prets a etre recuperer dans un point de retrait ou livrer chez-vous
+                  En 24H votre linge est prêt à être récupéré dans nos points de vente ou directement livrés chez vous.
                   </p>
                 </li>
               </ul>
@@ -193,11 +217,10 @@ export default class IndexPage extends React.Component {
             <div className="cosmos-grid-container home-card large">
                 <div className ="card-group">
                   <h1 className="mega">
-                    Inscrivez-vous et passer votre commande 
-                    en moins de 2 minutes.
+                  Passez votre commande sans un pas en 1 minute!
                   </h1>
                   <p>
-                  Creez votre de compte, programmez vos commades, achetez vos packages, suivez vos commandes, et bien d’autre fonctionalités grace a votre espace.
+                  Créez votre comte, confiez nous votre linge, souscrivez à nos packages, suivez votre commande en toute sécurité, et bénéficiez de nombreuses réductions grâce à votre espace Kremlin Pressing ! 
                   </p>
                   <TextButton
                     
@@ -219,7 +242,7 @@ export default class IndexPage extends React.Component {
               </div>
               <div className="horizontal-marquee">
               <MiniCard
-                  title="Blanchiserie"
+                  title="Lavage au kilo"
                   backgroundColor="#EAF1FB"
                   cosmoIcon={true}
                   icon="t-shirt"
@@ -227,7 +250,7 @@ export default class IndexPage extends React.Component {
                   secondColor="#FFF59B"
                 />
                 <MiniCard
-                  title="Blanchiserie"
+                  title="service coorporate"
                   backgroundColor="#EAF1FB"
                   cosmoIcon={true}
                   icon="t-shirt"
@@ -235,7 +258,15 @@ export default class IndexPage extends React.Component {
                   secondColor="#FFF59B"
                 />
                 <MiniCard
-                  title="Cordonerie"
+                  title="Repassage"
+                  backgroundColor="#EAF1FB"
+                  cosmoIcon={true}
+                  icon="t-shirt"
+                  iconColor="#020288"
+                  secondColor="#FFF59B"
+                />
+                <MiniCard
+                  title="Ramassage et livraison à Domicile"
                   backgroundColor="#FFE6E5"
                   cosmoIcon={true}
                   icon="shoes"
@@ -251,8 +282,7 @@ export default class IndexPage extends React.Component {
                   secondColor="#FFF59B"
                 />
                 <MiniCard
-                  title="Livraison et collecte
-                  à domicile"
+                  title="Lavage au kilo"
                   backgroundColor="#EAF1FB"
                   cosmoIcon={true}
                   icon="gift"
@@ -260,7 +290,7 @@ export default class IndexPage extends React.Component {
                   secondColor="#00C67E"
                 />
                 <MiniCard
-                  title="Blanchisserie"
+                  title="Nettoyage à sec"
                   backgroundColor="#EAF1FB"
                   cosmoIcon={true}
                   icon="t-shirt"
@@ -279,12 +309,12 @@ export default class IndexPage extends React.Component {
               Profitez de nos Tarifs pressing & linge et d'une livraison en 24h chrono à des prix imbattables
               </p>
               </div>
-              <div className="clarify four">
+              <div className="clarify three">
                 <PricingCard 
-                  name="Standard"
+                  name="Pack FAMILY"
                   price="12000"
                   currency="FCFA"
-                  description="Compte standard"
+                  description="Vous êtes plus de  2 membres d’une même famille, proches ou amis à être clients chez Kremlin Pressing, alors constituez  une FAMILLY et profitez jusqu’à 20% de réduction sur le montant total de votre facture !"
                   timing="Mois"
                   Purposes={this.state.Purpose.data}
                   backgroundColor="#fff"
@@ -292,10 +322,10 @@ export default class IndexPage extends React.Component {
                   bordered={true}
                 />
                 <PricingCard 
-                  name="Kilo"
+                  name="Pack DAILY"
                   price="25000"
                   currency="FCFA"
-                  description="Compte standard"
+                  description="Vous êtes un hôtel/restaurant/ salle de fête et vous désirez que l’on entretient quotidiennement votre linge de service, souscrivez à notre Pack DAILY et profitez jusqu’à 50% de réduction sur votre commande."
                   timing="Mois"
                   Purposes={this.state.Purpose.data}
                   backgroundColor="rgba(40,100,190,1)"
@@ -303,24 +333,13 @@ export default class IndexPage extends React.Component {
                   bordered={true}
                 />
                 <PricingCard 
-                  name="Mega"
+                  name="Pack WEEKLY"
                   price="45000"
                   currency="FCFA"
-                  description="Compte standard"
+                  description="Vous désignez le jour de la semaine qui vous convient, et notre ramasseur-livreur se chargera de récupérer votre linge et de vous livrer sous 24H et bénéficiez jusqu’à 10% réduction sur votre facture globale."
                   timing="Mois"
                   Purposes={this.state.Purpose.data}
                   backgroundColor="rgba(0,198,126,1)"
-                  textColor="#fff"
-                  bordered={true}
-                />
-                <PricingCard 
-                  name="Giga"
-                  price="65000"
-                  currency="FCFA"
-                  description="Compte standard"
-                  timing="Mois"
-                  Purposes={this.state.Purpose.data}
-                  backgroundColor="rgba(140,26,255,1)"
                   textColor="#fff"
                   bordered={true}
                 />

@@ -19,67 +19,52 @@ class Footer extends React.Component{
                     </h3>
                  </div>
                  <div className="clarifyItem">
-                    <h3>Contact Us —</h3>
+                    <h3>Contactez-nous —</h3>
                     <ContactInfo 
-                       title="A meet at office ?"
-                       text="Rue des Princes, Bali,"
-                       subText="Douala 1er, Littoral, Cameroun."
+                       title="Nous rencontrer"
+                       text="Terminus, Bonamoussadi,"
+                       subText="Douala 5eme, Littoral, Cameroun."
                     />
                     <ContactInfo 
-                       title="Want to mail us ?"
-                       text="hello@programactor.com"
+                       title="Ecrivez-nous par mail ?"
+                       text="hello@kremlinpressing.com"
                     />
                     <ContactInfo 
-                       title="Or join our team ?"
-                       text="carreer@programactor.com"
+                       title="Devenir membre de notre equipe ?"
+                       text="carreer@kremlinpressing.com"
                     />
                     <ContactInfo 
-                       title="Maybe a call/whatsapp ?"
-                       text="00237 669 22 79 76"
+                       title="Ou alors, appelez-nous ?"
+                       text="00237 233 47 07 87"
+                    />
+                    <ContactInfo 
+                       title="Ou via Whatsapp ?"
+                       text="00237 699 43 90 38"
                     />
                  </div>
                  <div className="clarifyItem">
-                    <h3>Useful Links</h3>
+                    <h3>Plan du site</h3>
                        <BeautifulLink
-                          text="Home"
+                          text="Acceuil"
                           to=""/>
                           <BeautifulLink
-                          text="Works"
-                          to="./works"/>
+                          text="Nos tarifs"
+                          to="./pricing"/>
                           <BeautifulLink
-                          text="About Us"
-                          to="./aboutus"/>
+                          text="Kremlin pour Entreprise"
+                          to="./entreprise"/>
+                          
+                          <h3>Liens utiles</h3>
                           <BeautifulLink
-                          text="Services"
+                          text="Creer un compte"
                           to=""/>
                           <BeautifulLink
-                          text="Contact Us"
-                          to=""/>
-                          <h3>Owner Projects</h3>
-                          <BeautifulLink
-                          text="One Touch Labs"
-                          to=""/>
-                           <BeautifulLink
-                          text="Bongo"
-                          to=""/>
-                          <BeautifulLink
-                          text="nzembo"
-                          to=""/>
-                          <BeautifulLink
-                          text="Koteka"
-                          to=""/>
-                          <BeautifulLink
-                          text="Kolia"
-                          to=""/>
-                          <BeautifulLink
-                          text="Kolala"
+                          text="Suivez votre commande"
                           to=""/>
                    </div>
                  <div className="clarifyItem">
-                    <h3>Social Networks</h3>
-                    <BeautifulLink
-                       text="Dribbble"
-                       to=""/>
+                    <h3>Suivez-nous sur les reseaux</h3>
+                    
                        <BeautifulLink
                        text="Instagram"
                        to=""/>
@@ -89,9 +74,7 @@ class Footer extends React.Component{
                        <BeautifulLink
                        text="Linked In"
                        to=""/>
-                       <BeautifulLink
-                       text="Behance"
-                       to=""/>
+                       
                        <BeautifulLink
                        text="Facebook"
                        to=""/>

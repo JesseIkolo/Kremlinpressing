@@ -242,8 +242,21 @@ function BeautifulLink(props) {
 
 function Tag(props){
   return (
-    <div className={props.background ? ("cosmo-text-tag"):("cosmo-text-tag no-back")}>
-      {props.for}
+    <div className={props.background ? ("cosmo-text-tag"):("cosmo-text-tag no-back")}
+        style={{backgroundColor : props.background, color : props.textColor}}
+    >
+      {
+        props.icon ?(
+          <>
+            {
+              props.cosmoIcon ? (
+                <CosmoIcon iconColor={props.textColor} icon={props.cosmoIcon}/>
+              ):null
+            }
+          </>
+        ):null
+      }
+      <span className="button-text">{props.for}</span>
     </div>
   )
 }
