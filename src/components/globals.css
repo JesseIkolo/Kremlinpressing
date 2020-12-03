@@ -407,6 +407,8 @@ body {
    margin: 0;
 }
 
+
+
 .top-nav .nav-links li {
    margin-left: 48px;
    margin-bottom: 0;
@@ -465,6 +467,8 @@ body {
    z-index: 0;
    width: 100%;
    height: 100%;
+   left: 0;
+   top: 0;
    background-image: url(../assets/img/home-sliderBKG.png);
    background-size: cover;
 }
@@ -1312,7 +1316,8 @@ h2.giga{
 }
 
 .type-search .cosmo-text-button{
-   margin-bottom: 0 !important;;
+   margin-bottom: 0 !important;
+   height: 100%;
 }
 
  .icon-cacher{
@@ -1638,9 +1643,13 @@ h2.giga{
       margin-left: 32px;
    }
 
+   .top-nav .nav-links.isShow{
+      
+   }
+/* 
    .top-nav .nav-links li.button{
       display : flex;
-   }
+   } */
 
    .top-nav .nav-links .navigation-show{
       display: flex;
@@ -1651,7 +1660,7 @@ h2.giga{
 
    .top-nav .nav-links .navigation-show:hover{
       transition: all cubic-bezier(0.86,0,0.07,1) 640ms;
-      transform: scaleX(1.6);
+      transform: scaleX(1.3);
    }
 
 
@@ -1691,16 +1700,17 @@ h2.giga{
    
    
    h1.mega {
-      font-size: 18px;
+      font-size: 24px;
    
    }
    
    h1.giga {
-      font-size: 24px;
+      font-size: 28px;
    }
 
    h1.supra {
-      font-size: 28px;
+      font-size: 32px;
+      text-align : left;
    }
 
    h2 {
@@ -1718,6 +1728,7 @@ h2.giga{
   .clarify {
    grid-gap: var(--mini-grid-gap);
    row-gap: 26px;
+   padding-bottom: 0;
 }
   .clarify.two, .program-clarify.two {
       grid-column: span 9;
@@ -1726,6 +1737,10 @@ h2.giga{
 
 .clarify.two li, .clarify.two .clarifyItem{
    grid-column: span 6;
+}
+
+.testimony{
+   margin-bottom: 16px;
 }
 
 .clarify.four, .program-clarify.four {
@@ -1737,6 +1752,17 @@ h2.giga{
 }
 
 @media screen and (max-width : 850px){
+   .squared-button.x3 {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px ;
+   }
+
+   .squared-button.x3 svg {
+      width: 48px !important;
+      height: 48px !important;
+   }
+
 .maintain .modal{
    background-color: var(--primary-color);
 }
@@ -1762,25 +1788,25 @@ h2.giga{
 }
 
 .cosmos-section{
-   padding: 0 32px;
+   padding: 64px 24px;
 }
 .cosmos-grid-container {
    padding: 64px 0;
    max-width: 100%;
-   grid-template-columns: repeat(4, minmax(var(--grid-width), 1fr));
+   grid-template-columns: repeat(4, 1fr);
    grid-template-rows: minmax(50px, 1fr);
    grid-gap: var(--mini-grid-gap);
-   row-gap: 32px;
+   row-gap: 16px;
 }
 
 .clarify, .program-clarify.two {
    grid-column: span 4 !important;
-   grid-template-columns: repeat(4, minmax(var(--grid-width), 1fr)) !important;
+   grid-template-columns: repeat(4, 1fr) !important;
    grid-template-rows: repeat(3, min-content) !important;
 }
 
 .clarify li, .clarify .announcer{
-grid-column: span 3 !important;
+grid-column: span 4 !important;
 margin-bottom: 0 !important;
 }
 
@@ -1804,8 +1830,18 @@ margin-bottom: 0 !important;
 }
 
 .home-slider.center h1, .home-slider.center h3, .home-slider.center .home-slider-header {
-   grid-column: 1 / 4;
-   text-align: center;
+   grid-column: 1 / 5;
+   text-align: left;
+}
+
+.home-slider.center p{
+   margin-top: 16px;
+}
+
+.home-slider-header {
+   grid-column: 1 / 5;
+   text-align: left;
+   margin-bottom: 16px;
 }
 
 .clarify.one-large li, .program-clarify.one-large li {
@@ -1815,9 +1851,9 @@ margin-bottom: 0 !important;
 .cosmo-text-button {
    padding: 4px;
 }
-.cosmo-text-button .button-text{
+/* .cosmo-text-button .button-text{
    display: none;
-}
+} */
 
 .cosmo-text-button .icon-cacher{
    margin: 0;
@@ -1841,8 +1877,8 @@ h1.supra {
 }
 
 .home-card .card-group{
-   grid-column: 1/4;
-   padding: 0 32px;
+   grid-column: 1/5;
+   padding: 0;
 }
 
 .squared-button.x2{
@@ -1856,14 +1892,50 @@ h1.supra {
    height: 16px;
 }
 
+.horizontal-marquee {
+   margin: 24px 0;
+}
+
+.horizontal-marquee .hm-card {
+   margin-left: 0;
+   margin-right: 8px;
+   width: 160px;
+}
+.cosmos-container-no-mmargin-auto {
+   margin: 0 0 0 0;
+}
+.home-slider .home-text.center {
+   grid-column: 1 / 5;
+   text-align: center;
+}
+
+.cosmo-text-button.no-iconed {
+   /* height: 100%; */
+}
+
+.tags.center {
+   flex-direction: column;
+   align-items: center;
+}
+
+.tags .cosmo-text-tag{
+   margin-right: 0;
+}
+
+.clearfix-128{
+   margin-top: 128px;
+}
+
+.clearfix-64{
+   margin-top: 64px;
+}
+
 
 
 }
 
 /* 
-
-      Exclusive
-
+     Exclusive
 */
 
 .linear{

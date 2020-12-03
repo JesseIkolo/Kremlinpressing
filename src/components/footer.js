@@ -10,7 +10,7 @@ class Footer extends React.Component{
    }
    render(){
       return(
-         <footer className="linear">
+         <footer className=" cosmos-section linear">
               <div className="cosmos-grid-container">
                  <div className="clarify four">
                  <div className="clarifyItem">

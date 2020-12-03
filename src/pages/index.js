@@ -154,7 +154,7 @@ export default class IndexPage extends React.Component {
                 </li>
               </ul>
             </div>
-          
+          <div className="clearfix-128"></div>
             <div className="cosmos-grid-container home-slider center">
               <div className="home-slider-header">
               <h1 className="mega">
@@ -171,7 +171,7 @@ export default class IndexPage extends React.Component {
                     iconColor="#020288"
                     backgroundColor="transparent"
                   />
-                  <h2 className="giga">
+                  <h2>
                     1. Dépôt du linge
                    </h2>
                   <p>
@@ -187,7 +187,7 @@ export default class IndexPage extends React.Component {
                     iconColor="#020288"
                     backgroundColor="transparent"
                   />
-                  <h2 className="giga">
+                  <h2>
                     2. Traitement de ma commande
                   </h2>
                   <p>
@@ -202,7 +202,7 @@ export default class IndexPage extends React.Component {
                     iconColor="#020288"
                     backgroundColor="transparent"
                   />
-                  <h2 className="giga">
+                  <h2>
                   3.  Livraison au point de vente/à domicile
                   </h2>
                   <p>
@@ -299,7 +299,7 @@ export default class IndexPage extends React.Component {
                 />
               </div>
           </div>
-          
+          <div className="clearfix-64"></div>
           <div className="cosmos-grid-container home-slider center">
               <div className="home-slider-header">
               <h1 className="mega">
@@ -345,6 +345,8 @@ export default class IndexPage extends React.Component {
                 />
                 </div>
             </div>
+          <div className="clearfix-128"></div>
+
             <div className="cosmos-grid-container home-slider center">
               <div className="home-slider-header">
               <h1 className="mega">

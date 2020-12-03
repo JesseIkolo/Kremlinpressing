@@ -59,7 +59,7 @@ const Header = ({ siteTitle }) =>{
           </Link>
           
           </div>
-          <ul className="nav-links">
+          <ul className="nav-links isShow">
           <li>
               <Link to="../pricing">Tarifs</Link>
             </li>
