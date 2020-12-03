@@ -165,6 +165,16 @@ function CosmoIcon(props){
             </svg>
          )
       }
+
+      else if(props.icon ==="close"){
+         return(
+            <svg width="19" height="19" viewBox="0 0 19 19" fill={props.iconColor} xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.3315 1.18042L1.33154 17.1804M17.3315 17.1804L1.33154 1.18042L17.3315 17.1804Z" stroke={props.iconColor} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+         )
+      }
+
       else if(props.icon === "user-ok"){
          return(
             <svg width="16" height="16" viewBox="0 0 11 10" fill={props.iconColor} xmlns="http://www.w3.org/2000/svg">

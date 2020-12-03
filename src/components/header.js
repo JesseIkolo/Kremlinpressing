@@ -10,8 +10,15 @@ const Header = ({ siteTitle }) =>{
     scrolled: false,
     visible: false,
     hided : false, //for the header
-    lastScrollPosition : 0
+    lastScrollPosition : 0,
+    menuIsShow: false,
   });
+
+  const toggleMenu = ()  =>{
+      setState({ 
+        ...state,
+        menuIsShow: !state.menuIsShow });
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +56,6 @@ const Header = ({ siteTitle }) =>{
   };
 
   return(
-  
     <>
   <header className="top-bar" data-active={state.scrolled}>
       <div className="container top-nav">
@@ -59,7 +65,7 @@ const Header = ({ siteTitle }) =>{
           </Link>
           
           </div>
-          <ul className="nav-links isShow">
+          <ul className={"nav-links" + (state.menuIsShow ? " isShow" : "")}>
           <li>
               <Link to="../pricing">Tarifs</Link>
             </li>
@@ -78,15 +84,18 @@ const Header = ({ siteTitle }) =>{
             <li className="button">
               <TextButton 
                   cosmoIcon={false}
-                  text="Demarrer"
+                  text="Connexion"
                   background={true}
                   backgroundColor="#00C67E"
                   textColor="#fff"
                   to="signUp"
                   />
             </li>
-            <li className="navigation-show">
+            <li className="navigation-show" onClick={() => toggleMenu()}>
               <CosmoIcon icon="menu"/>
+            </li>
+            <li className="navigation-close" onClick={() => toggleMenu()}>
+              <CosmoIcon icon="close" iconColor="#fff"/>
             </li>
           </ul>
           

@@ -1629,6 +1629,11 @@ h2.giga{
       display: none;
 }
 
+
+.top-nav .nav-links .navigation-close{
+   display: none;
+}
+
 /* iPad screen  */
 
 @media screen and (max-width : 1248px){
@@ -1644,7 +1649,39 @@ h2.giga{
    }
 
    .top-nav .nav-links.isShow{
-      
+      display : flex;
+      position : fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(251.69deg, #163869 5.15%, #033d94 78.57%);
+      color: var(--text-color-inverse);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+   }
+
+   .top-nav .nav-links.isShow .navigation-show{
+      display: none;
+   }
+
+
+   .top-nav .nav-links.isShow .navigation-close{
+      display: flex;
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      margin: 0;
+   }
+
+   .top-nav .nav-links.isShow li{
+      display: flex;
+      margin: 64px 0 0 0;
+      justify-content: center;
+      align-items: center;
    }
 /* 
    .top-nav .nav-links li.button{
