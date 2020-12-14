@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Img, Link } from 'gatsby'
 import Layout from '../components/layout'
-import {Tag, TestimonyCard, PricingCard , MiniCard, TextButton, Notification, Para, socialButton, SquaredButton} from '../components/molecule'
+import {Illustration, Tag, TestimonyCard, PricingCard , MiniCard, TextButton, SquaredButton} from '../components/molecule'
 import {CosmoIcon} from '../components/cosmoIcon'
 import SEO from "../components/seo"
 import Header from "../components/header"
@@ -61,7 +61,7 @@ export default class IndexPage extends React.Component {
                         />
                         <TextButton 
                             cosmoIcon={false}
-                            text="Passer ma commande"
+                            text="Commander"
                             background={true}
                             backgroundColor="#fff"
                             textColor="var(--Grey-2)"
@@ -96,7 +96,7 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
 
-          <div className="cosmos-section semi-height  padded-128">
+          <div className="cosmos-section   padded-128">
           <div className="cosmos-grid-container home-slider center">
               <div className="home-slider-header">
               <h1 className="mega">
@@ -105,14 +105,10 @@ export default class IndexPage extends React.Component {
               </div>
               <ul className="clarify three">
                 <li>
-                  <SquaredButton
-                    size="x3 no-padding"
-                    cosmoIcon="true"
-                    icon="route"
-                    secondColor="#FFBDBC"
-                    iconColor="#020288"
-                    backgroundColor="transparent"
+                  <Illustration
+                    illustration="illustration-1"
                   />
+                  
                   <h2>
                     Suivi sécurisé de votre linge
                    </h2>
@@ -121,13 +117,8 @@ export default class IndexPage extends React.Component {
                   </p>
                 </li>
                 <li>
-                  <SquaredButton
-                    size="x3 no-padding"
-                    cosmoIcon="true"
-                    icon="laundry-machine-colored"
-                    secondColor="#FFBDBC"
-                    iconColor="#020288"
-                    backgroundColor="transparent"
+                <Illustration
+                    illustration="illustration-2"
                   />
                   <h2>
                       Statistiques en temps réel
@@ -137,13 +128,8 @@ export default class IndexPage extends React.Component {
                   </p>
                 </li>
                 <li>
-                  <SquaredButton
-                    size="x3 no-padding"
-                    icon="iron-colored"
-                    cosmoIcon="true"
-                    secondColor="#FFBDBC"
-                    iconColor="#020288"
-                    backgroundColor="transparent"
+                <Illustration
+                    illustration="illustration-3"
                   />
                   <h2>
                     Soins spécialisés à la demande
@@ -163,16 +149,16 @@ export default class IndexPage extends React.Component {
               </div>
               <ul className="clarify text-center three">
                 <li>
-                  <SquaredButton
+                <SquaredButton
                     size="x3 no-padding"
                     cosmoIcon="true"
-                    icon="ecommerce-colored"
-                    secondColor="#FFF59B"
+                    icon="car-time-colored"
+                    secondColor="#E2C4FF"
                     iconColor="#020288"
                     backgroundColor="transparent"
                   />
                   <h2>
-                    1. Dépôt du linge
+                    1.  Dépôt de linge dans un <br/>point de rammassage
                    </h2>
                   <p>
                   Dans votre espace de commande, sélectionnez les différents articles et indiquez leur nombre.
@@ -188,7 +174,7 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2>
-                    2. Traitement de ma commande
+                    2. Traitement de ma <br/>commande
                   </h2>
                   <p>
                   Une fois votre commande validée et les différents services sollicités renseignés, votre linge est récupéré et directement acheminé à l’usine pour traitement.</p>
@@ -203,7 +189,8 @@ export default class IndexPage extends React.Component {
                     backgroundColor="transparent"
                   />
                   <h2>
-                  3.  Livraison au point de vente/à domicile
+                  3.  Livraison au point de vente <br/>
+                  ou à domicile
                   </h2>
                   <p>
                   En 24H votre linge est prêt à être récupéré dans nos points de vente ou directement livrés chez vous.
@@ -213,7 +200,7 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
 
-          <div className="cosmos-section semi-height  linear">
+          <div className="cosmos-section   linear">
             <div className="cosmos-grid-container home-card large">
                 <div className ="card-group">
                   <h1 className="mega">
@@ -233,152 +220,10 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
 
-          <div className="cosmos-section semi-height  padded-128">
-          <div className="cosmos-container-no-mmargin-auto home-slider center">
-              <div className="home-slider-header">
-                <h1 className="mega">
-                  Nos services
-                </h1>
-              </div>
-              <div className="horizontal-marquee">
-              <MiniCard
-                  title="Lavage au kilo"
-                  backgroundColor="#EAF1FB"
-                  cosmoIcon={true}
-                  icon="t-shirt"
-                  iconColor="#020288"
-                  secondColor="#FFF59B"
-                />
-                <MiniCard
-                  title="service coorporate"
-                  backgroundColor="#EAF1FB"
-                  cosmoIcon={true}
-                  icon="t-shirt"
-                  iconColor="#020288"
-                  secondColor="#FFF59B"
-                />
-                <MiniCard
-                  title="Repassage"
-                  backgroundColor="#EAF1FB"
-                  cosmoIcon={true}
-                  icon="t-shirt"
-                  iconColor="#020288"
-                  secondColor="#FFF59B"
-                />
-                <MiniCard
-                  title="Ramassage et livraison à Domicile"
-                  backgroundColor="#FFE6E5"
-                  cosmoIcon={true}
-                  icon="shoes"
-                  iconColor="#020288"
-                  secondColor="#FFBDBC"
-                />
-                <MiniCard
-                  title="Service express"
-                  backgroundColor="#F2E5FF"
-                  cosmoIcon={true}
-                  icon="timer"
-                  iconColor="#020288"
-                  secondColor="#FFF59B"
-                />
-                <MiniCard
-                  title="Lavage au kilo"
-                  backgroundColor="#EAF1FB"
-                  cosmoIcon={true}
-                  icon="gift"
-                  iconColor="#020288"
-                  secondColor="#00C67E"
-                />
-                <MiniCard
-                  title="Nettoyage à sec"
-                  backgroundColor="#EAF1FB"
-                  cosmoIcon={true}
-                  icon="t-shirt"
-                  iconColor="#020288"
-                  secondColor="#FFF59B"
-                />
-              </div>
-          </div>
-          <div className="clearfix-64"></div>
-          <div className="cosmos-grid-container home-slider center">
-              <div className="home-slider-header">
-              <h1 className="mega">
-                  Nos tarifs pressing & linge
-              </h1>
-              <p>
-              Profitez de nos Tarifs pressing & linge et d'une livraison en 24h chrono à des prix imbattables
-              </p>
-              </div>
-              <div className="clarify three">
-                <PricingCard 
-                  name="Pack FAMILY"
-                  price="12000"
-                  currency="FCFA"
-                  description="Vous êtes plus de  2 membres d’une même famille, proches ou amis à être clients chez Kremlin Pressing, alors constituez  une FAMILLY et profitez jusqu’à 20% de réduction sur le montant total de votre facture !"
-                  timing="Mois"
-                  Purposes={this.state.Purpose.data}
-                  backgroundColor="#fff"
-                  textColor=""
-                  bordered={true}
-                />
-                <PricingCard 
-                  name="Pack DAILY"
-                  price="25000"
-                  currency="FCFA"
-                  description="Vous êtes un hôtel/restaurant/ salle de fête et vous désirez que l’on entretient quotidiennement votre linge de service, souscrivez à notre Pack DAILY et profitez jusqu’à 50% de réduction sur votre commande."
-                  timing="Mois"
-                  Purposes={this.state.Purpose.data}
-                  backgroundColor="rgba(40,100,190,1)"
-                  textColor="#fff"
-                  bordered={true}
-                />
-                <PricingCard 
-                  name="Pack WEEKLY"
-                  price="45000"
-                  currency="FCFA"
-                  description="Vous désignez le jour de la semaine qui vous convient, et notre ramasseur-livreur se chargera de récupérer votre linge et de vous livrer sous 24H et bénéficiez jusqu’à 10% réduction sur votre facture globale."
-                  timing="Mois"
-                  Purposes={this.state.Purpose.data}
-                  backgroundColor="rgba(0,198,126,1)"
-                  textColor="#fff"
-                  bordered={true}
-                />
-                </div>
-            </div>
-          <div className="clearfix-128"></div>
+          <div className="cosmos-section   padded-128">
+         <div className="clearfix-128"></div>
 
-            <div className="cosmos-grid-container home-slider center">
-              <div className="home-slider-header">
-              <h1 className="mega">
-                Ils ont apprecié nos services, et ils en parlent.
-              </h1>
-              <p>
-                Ils donnent leurs avis sur la qualité et le professionalisme de nos sevices
-              </p>
-              </div>
-              <div className="clarify two">
-                <TestimonyCard
-                  TestimonierUserProfilPic=""
-                  TestimonierName="André Noumangué"
-                  Testimony="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor luctus venenatis, lectus magna fringilla urna, porttitor."
-                  TestimonierDescription="37 ans, investisseur dans immobilier locatif."
-                  facebook="https://www.facebook.com/kremlinpressing"
-                  twitter="https://www.twitter.com/kremlinpressing"
-                  // linkedIn="https://www.linkedIn.com/kremlinpressing"
-                  instagram="https://www.instagram.com/kremlinpressing"
-                />
-                <TestimonyCard
-                  TestimonierUserProfilPic=""
-                  TestimonierName="André Noumangué"
-                  Testimony="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor luctus venenatis, lectus magna fringilla urna, porttitor."
-                  TestimonierDescription="37 ans, investisseur dans immobilier locatif."
-                  facebook="https://www.facebook.com/kremlinpressing"
-                  twitter="https://www.twitter.com/kremlinpressing"
-                  // linkedIn="https://www.linkedIn.com/kremlinpressing"
-                  instagram="https://www.instagram.com/kremlinpressing"
-                />
-              </div>
-              </div>
+            
             </div>
 
           </Layout>

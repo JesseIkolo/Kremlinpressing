@@ -3,6 +3,7 @@ import React, { Children } from "react";
 import { Link} from "gatsby";
 // import Img from 'gatsby-image'
 import {CosmoIcon} from './cosmoIcon';
+import {CosmoIll} from './cosmoIll';
 
 
 const Container = ({ id }) => (
@@ -81,6 +82,14 @@ SquaredButton.propTypes = {
 
 SquaredButton.defaultProps ={
   icon : ``,
+}
+
+function Illustration(props){
+  return(
+    <div className="ill">
+      <CosmoIll illustration={props.illustration}/>
+    </div>
+  )
 }
 
 function TestimonyCard(props){
@@ -321,5 +330,5 @@ Para.propTypes = {
 // }
 
 // export default Container
-export { TestimonyCard, PricingCard, MiniCard, Container, TextButton, Notification, ContactInfo, BeautifulLink, Tag, Project, Para, SocialButton, SquaredButton}
+export { Illustration, TestimonyCard, PricingCard, MiniCard, Container, TextButton, Notification, ContactInfo, BeautifulLink, Tag, Project, Para, SocialButton, SquaredButton}
 

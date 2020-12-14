@@ -70,6 +70,12 @@ const Header = ({ siteTitle }) =>{
               <Link to="../pricing">Tarifs</Link>
             </li>
             <li>
+              <Link to="../services">Services</Link>
+            </li>
+            <li>
+              <Link to="../textimony">Avis et Temoignages</Link>
+            </li>
+            <li>
               <Link to="../enterprise">Entreprise</Link>
             </li>
             <li>
