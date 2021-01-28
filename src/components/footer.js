@@ -72,10 +72,6 @@ class Footer extends React.Component{
                        text="Twitter"
                        to=""/>
                        <BeautifulLink
-                       text="Linked In"
-                       to=""/>
-                       
-                       <BeautifulLink
                        text="Facebook"
                        to=""/>
                         <BeautifulLink

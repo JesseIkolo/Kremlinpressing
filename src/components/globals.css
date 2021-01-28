@@ -117,15 +117,15 @@ body {
     position: relative;
 }
 
-.cosmos-section.full-height{
+.cosmos-section .full-height{
    min-height : 100vh
 }
 
-.cosmos-section.semi-height{
-   min-height : 50vh;
+.cosmos-section .semi-height{
+   height : 50vh;
 }
 
-.cosmos-section.eight-height{
+.cosmos-section .eight-height{
    min-height: 80vh;
 }
 
@@ -474,9 +474,8 @@ body {
 }
 
 .home-slider.align-center {
-  
     align-items: center;
-    height: 100vh;
+    /* height: inherit; */
     z-index: 2;
     position: relative;
 }
@@ -526,7 +525,7 @@ body {
 }
 
 .home-slider .home-text.center{
-   grid-column: 3 / 10;
+   grid-column: 3 / 11;
    text-align: center;
 }
 
@@ -689,11 +688,36 @@ body {
    padding: 24px ;
 }
 
+.lateral {
+   grid-column: span 12;
+}
+
+.lateral .pricing{
+   flex-direction : row;
+   margin-bottom: 64px;
+   display: flex;
+
+}
+
+.lateral .pricing .pricingHeader{
+   width: 40%;
+}
+
+.lateral .pricing .purposeEnumeration {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   width: 60%;
+
+}
+
+
 .pricing{
    flex-direction: column;
    display: flex;
    padding: 32px 24px;
-   border-radius : 32px
+   border-radius : 32px;
+   border : 1px solid rgba(68,68,68,.3)
+
 }
 
 .pricing::before{
@@ -708,7 +732,19 @@ border-radius: 24px;
 .pricing .pricingHeader{
    display: flex;
    flex-direction: column;
-   flex-grow: 16;
+   /* flex-grow: 16; */
+}
+.pricing .pricingHeader .special{
+   margin-bottom: 16px ;
+   font-weight: bold;
+   font-size: 90%;
+   height: 24px;
+   font-family: var(--semi-bold-font);
+   color: var(--Grey-4);
+}
+
+.pricing .pricingHeader .special span{
+   padding-right:8px ;
 }
 
 .pricing .pricingHeader .pricingItemName{
@@ -734,7 +770,7 @@ border-radius: 24px;
 }
 
 .pricing .pricingHeader .pricingDescription{
-   height: 160px;
+   height: 96px;
    text-align: left;
    font-size: 16px;
    opacity: .9;
@@ -744,6 +780,8 @@ border-radius: 24px;
 
 
 }
+
+
 
 .pricing .purposeEnumeration .pricingPurposeItem{
    display: flex;
@@ -755,6 +793,10 @@ border-radius: 24px;
 
 .pricing .purposeEnumeration .pricingPurposeItem svg{
    margin-right: 16px;
+}
+
+.pricing .purposeEnumeration .pricingPurposeItem span{
+   width:calc( 100% - 32px);
 }
 
 .testimony{}
@@ -809,6 +851,15 @@ border-radius: 24px;
    margin : 64px 0;
 }
 
+.gridx4{
+   display: grid;
+   grid-template-columns: repeat(4, minmax(calc(3 * (var(--grid-width)) + 2 * (var(--grid-gap))), 1px));
+   grid-gap: 24px;
+   margin : 0 0 64px 0;
+   grid-column: 1/11;
+
+}
+
 .horizontal-marquee .hm-card{
    width: calc(3 * (var(--grid-width)) + 2 * (var(--grid-gap)));
    padding: 24px;
@@ -817,6 +868,21 @@ border-radius: 24px;
    border-radius: 24px;
    float: left;
    margin-left : 24px
+}
+
+.gridx4 .hm-card{
+   width: calc(3 * (var(--grid-width)) + 2 * (var(--grid-gap)));
+   padding: 24px;
+   display: flex;
+   flex-direction: column;
+   border-radius: 24px;
+   float: left;
+}
+
+.gridx4 .hm-card h2{
+   margin-bottom : 24px;
+   margin-top: 24px;
+   height: 70px;
 }
 
 .horizontal-marquee .hm-card svg{

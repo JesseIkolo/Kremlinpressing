@@ -66,17 +66,14 @@ const Header = ({ siteTitle }) =>{
           
           </div>
           <ul className={"nav-links" + (state.menuIsShow ? " isShow" : "")}>
-          <li>
-              <Link to="../pricing">Tarifs</Link>
-            </li>
             <li>
-              <Link to="../services">Services</Link>
+              <Link to="../pricing">Tarifs et Services</Link>
             </li>
             <li>
               <Link to="../textimony">Avis et Temoignages</Link>
             </li>
             <li>
-              <Link to="../enterprise">Entreprise</Link>
+              <Link to="../entreprise">Entreprise</Link>
             </li>
             <li>
               <Link to="../signIn">S'inscire</Link>
@@ -94,7 +91,7 @@ const Header = ({ siteTitle }) =>{
                   background={true}
                   backgroundColor="#00C67E"
                   textColor="#fff"
-                  to="signUp"
+                  to="../signUp"
                   />
             </li>
             <li className="navigation-show" onClick={() => toggleMenu()}>

@@ -44,7 +44,7 @@ export default class IndexPage extends React.Component {
           <SEO title="Kremlin Pressing" />
           <div className="cosmos-section linear">
             <div className="home-sliderBKG full"></div>
-            <div className="cosmos-grid-container home-slider align-center">
+            <div className="cosmos-grid-container full-height home-slider align-center">
               <div className="home-text center">
 
               <h1 className="supra">
@@ -220,11 +220,11 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
 
-          <div className="cosmos-section   padded-128">
+          {/* <div className="cosmos-section   padded-128">
          <div className="clearfix-128"></div>
 
             
-            </div>
+            </div> */}
 
           </Layout>
       </>

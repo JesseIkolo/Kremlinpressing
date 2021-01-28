@@ -130,51 +130,63 @@ function TestimonyCard(props){
   )
 }
 function PricingCard(props){
-  console.log("Les purposes ", props.Purposes)
+  // console.log("Les purposes ", props.Purposes)
+  if(props.Specials){
+    var specials = props.Specials.map((s,i)=>{
+      console.log("Specials ",i," : ",s)
+      return <span>{s}</span>
+    })
+  }
+  if(props.Purposes){
+    var purposes = props.Purposes.map((p,i) =>{
+      console.log("Puropses ",i," : ",p);
+      return <div className="pricingPurposeItem">
+      <CosmoIcon iconColor={props.textColor} icon="check"/>
+        <span>{p}</span>
+    </div>
+    })
+  }
   return(
+    
     <div 
       style={props.backgroundColor ? ({backgroundColor : props.backgroundColor,color : props.textColor}):(null)}
       className={props.bordered ? ("pricing bordered clarifyItem"):("pricing clarifyItem")}>
                   <div className="pricingHeader">
                     <Link className="pricingItemName" to="">{props.name}</Link>
-                    <Link to="" className="pricingValue">{props.price} <span className="currency">{props.currency}/{props.timing}</span></Link>
-                    <p className="pricingDescription">
-                      {props.description}
-                    </p>
+                    <Link to="" className="pricingValue">{props.price} <span className="currency">{props.currency}</span></Link>
+                    {props.Specials ? ( 
+                      <div className="special">
+                        {specials}
+                      </div>
+                     ):(<div className="special"></div>)}
+                    {props.description ? (
+                        <p className="pricingDescription">
+                          {props.description}
+                        </p>
+                    ):(null)
+                    }
                   </div>
+                  {/* {
+                    (props.Purposes)
+                  } */}
                   <div className="purposeEnumeration">
-                    <div className="pricingPurposeItem">
-                      <CosmoIcon iconColor={props.textColor} icon="check"/>
-                        Pricing Purpose Item
-                    </div>
-                    <div className="pricingPurposeItem">
-                      <CosmoIcon iconColor={props.textColor} icon="check"/>
-                        Pricing Purpose Item
-                    </div>
-                    <div className="pricingPurposeItem">
-                      <CosmoIcon iconColor={props.textColor} icon="check"/>
-                        Pricing Purpose Item
-                    </div>
-                    <div className="pricingPurposeItem">
-                      <CosmoIcon iconColor={props.textColor} icon="check"/>
-                        Pricing Purpose Item
-                    </div>
-                    <div className="pricingPurposeItem">
-                      <CosmoIcon iconColor={props.textColor} icon="check"/>
-                        Pricing Purpose Item
-                    </div>
-                    <div className="pricingPurposeItem">
-                      <CosmoIcon iconColor={props.textColor} icon="check"/>
-                        Pricing Purpose Item
-                    </div>
-                    <div className="pricingPurposeItem">
-                      <CosmoIcon iconColor={props.textColor} icon="check"/>
-                        Pricing Purpose Item
-                    </div>
+                    {purposes}
                   </div>
                 </div>
   )
 }
+
+// render={data => (
+//   <div class="featured-products">
+//     {data.allContentfulFeaturedProduct.edges.map(({ node }, i) => (
+//       <div class="product" key={i}>
+//         {node.featuredProducts.map(product => (
+//           <div>{product}</div>
+//         ))}
+//       </div>
+//     ))}
+//   </div>
+// )}
 
 
 function Notification(props) {
